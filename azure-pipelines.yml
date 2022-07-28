@@ -1,0 +1,16 @@
+#Trigger
+trigger:
+- none
+
+#Resources
+resources:
+  repositories:
+  - repository: pipeline-library
+    type: git
+    name: DevOps/pipeline-library
+    ref: develop
+
+jobs:
+- template: dotnetcore/build.yml@pipeline-library
+  parameters:
+    solution: 'VersionCheckerApi.sln'    
