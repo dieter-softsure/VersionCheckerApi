@@ -1,22 +1,22 @@
 # Introductie
-Dit project leest de pakketreferenties en pipelinedata van alle repositories die zijn aangegeven. Vulnerabilities worden gehaald uit de Github advisory database.
+This Project reads the package references and pipeline data from all the repositories. Vulnerabilities are taken from the Github advisory database.
 
-Ondersteunde hosts:
+Supported hosts:
 - Azure devops
 - Github
 
-Ondersteunde talen en filetypen:
+Supported languages and filetypes:
 - .net (Nuget)
 	- Framework
 	- Core
 	- Standard
 	- .net 5+
 - nodejs (NPM) 
-	- Alle frameworks
-	- package.lock.json v1. v2+ is ongetest
+	- All frameworks
+	- package.lock.json v1. v2+ is untested
 - PHP (Composer) 
 	- composer.json en composer.lock
-	- Packagist, WPackagist en Drupal pakketten
+	- Packagist, WPackagist and Drupal packages
 
 # Project opstarten
 Dit project is geschreven in .net 6. Zorg er voor dat je een editor hebt die dat ondersteunt.
