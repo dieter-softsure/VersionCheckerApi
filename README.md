@@ -1,4 +1,4 @@
-# Introductie
+# Introduction
 This Project reads the package references and pipeline data from all the repositories. Vulnerabilities are taken from the Github advisory database.
 
 Supported hosts:
@@ -18,37 +18,38 @@ Supported languages and filetypes:
 	- composer.json en composer.lock
 	- Packagist, WPackagist and Drupal packages
 
-# Project opstarten
+# Project startup
 Dit project is geschreven in .net 6. Zorg er voor dat je een editor hebt die dat ondersteunt.
 
-1. Clone de repository naar een map naar keuze
+1. Clone the repository naar een map naar keuze
 2. Open VersionCheckerApi.sln
-3. Druk op de startknop
+3. Press the start button
 
-# Build en deploy
-Bij elke pull request in azure devops word een build gemaakt. Als je wilt deployen hoef je alleen op de ploy te klikken.
+# Build and deploy
+During every pull request in azure devops, a build is made. Als je wilt deployen hoef je alleen op de ploy te klikken.
 
-1. Navigeer naar deze repository in devops
-2. Druk links op Pipelines -> Releases
-3. Klik een release aan en druk dan op deploy
+1. Navigate to this repository in devops
+2.Click the links for Pipelines -> Releases
+3. Click on a releaseand then press deploy
 
-# Basisprincipes
-De code is modulair opgezet. Omdat de repositories die worden uitgelezen een speciale structuur bevatten is deze structuur geprobeerd na te maken in de code.
+# Basic principes
+The code is modular opgezet. Because the repositories are read one special structure bevatten is this structuur geprobeerd na te maken in de code.
 
-In devops is de hierarchie
+This is the hierarchy In devops
 ```
-- Organisatie
+- Organisation
 	- Project
 		- Repository
 ```
 
-Die repository is in principe gewoon de code. Dat ziet er zo uit:
+The repository is in principle living in the code. Dat ziet er zo uit:
 ```
 - Repository
 	- Module (oftewel map met project er in aangeduid met bv. een .csproj file)
 		- Pakket
 ```
 
+in the code of the project , the structure is as follows:
 In de code van dit project is deze structuur aangehouden:
 ```
 (Organisatie word overgeslagen)
